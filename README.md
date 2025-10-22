@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Easy Custom WP Login Register
 
 A small WordPress plugin to style and modernize the login/register pages with a configurable animated gradient background, dark/light mode toggle, custom branding text, color pickers for buttons and inputs, and an admin settings page with live preview.
