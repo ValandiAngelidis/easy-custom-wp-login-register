@@ -1,0 +1,211 @@
+/* Admin styles for Easy Custom WP Login — professional two-column layout */
+
+.wrap h1 {
+  margin-bottom: 18px;
+  font-size: 1.6rem;
+}
+
+.ecwpr-admin-container {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.ecwpr-admin-left {
+  flex: 1 1 50%;
+  max-width: 50%;
+  min-width: 0; /* Allow flex items to shrink below content size */
+  overflow-x: hidden;
+}
+
+.ecwpr-settings-scroll {
+  max-height: calc(100vh - 240px);
+  overflow: auto;
+  padding-right: 12px;
+  padding-bottom: 12px;
+  background: #fff;
+  border: 1px solid #e6e9ee;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(31,45,61,0.06);
+  overflow-x: hidden;
+}
+
+.form-table {
+  width: 100%;
+  max-width: 100%;
+  table-layout: auto;
+  box-sizing: border-box;
+}
+
+.form-table tr {
+  display: table-row;
+}
+
+.form-table th { 
+  vertical-align: top; 
+  padding-top: 14px; 
+  width: 200px;
+  min-width: 150px;
+  max-width: 200px;
+  word-wrap: break-word;
+}
+
+.form-table td { 
+  width: auto;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.form-table input[type="text"],
+.form-table input[type="number"] {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.form-table input.regular-text {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.form-table input.ecwpr-color { 
+  width: 120px; 
+  max-width: 100%;
+  display: block;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+}
+
+/* Media uploader buttons */
+.form-table .button {
+  display: block;
+  margin-bottom: 6px;
+  width: fit-content;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Logo upload row - make buttons wrap on new line */
+.ecwpr-logo-upload-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.ecwpr-logo-upload-wrapper input[type="text"] {
+  flex: 1 1 100%;
+  min-width: 0;
+  margin-bottom: 8px;
+}
+
+.ecwpr-logo-upload-wrapper .button {
+  flex: 0 0 auto;
+  margin-bottom: 0;
+}
+
+.form-table td > div[style*="display:flex"] {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  align-items: flex-start !important;
+}
+
+.form-table td > div[style*="display:flex"] input[type="text"] {
+  flex: 1 1 100% !important;
+  min-width: 0 !important;
+  margin-bottom: 8px;
+}
+
+.form-table td > div[style*="display:flex"] .button {
+  flex: 0 0 auto !important;
+  margin-bottom: 0 !important;
+}
+
+/* Buttons and submit area */
+.form-table .description { 
+  margin-top: 6px; 
+  color: #6b7280;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Preview column */
+.ecwpr-admin-right { 
+  flex: 1 1 50%; 
+  max-width: 50%;
+}
+.ecwpr-preview-sticky { position: sticky; top: 120px; }
+
+#ecwpr-preview {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 20px 0;
+  padding: 20px;
+  border-radius: 12px;
+  color: #fff;
+  box-sizing: border-box;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 12px 30px rgba(2,6,23,0.22);
+  transition: background 400ms ease, color 300ms ease, box-shadow 300ms ease;
+}
+
+#ecwpr-preview.ecwpr-preview-light {
+  color: #1e293b;
+  background: #fff !important;
+  box-shadow: 0 8px 20px rgba(2,6,23,0.06);
+  border: 1px solid #e6e9ee;
+}
+
+#ecwpr-preview .ecwpr-preview-title { text-align: center; font-weight: 700; margin-bottom: 12px; font-size: 1.1rem; }
+#ecwpr-preview .ecwpr-preview-logo { text-align: center; margin-bottom: 16px; }
+#ecwpr-preview .logo-box { width:72px;height:72px;border-radius:8px;background:rgba(255,255,255,0.08);display:inline-block; }
+#ecwpr-preview .ecwpr-preview-form input { width:100%; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.06); margin-bottom:10px; box-sizing:border-box; background: transparent; color: inherit; }
+#ecwpr-preview .ecwpr-preview-form button { width:100%; padding:10px; border-radius:8px; border:none; font-weight:600; color:#fff; cursor:pointer; }
+#ecwpr-preview .ecwpr-preview-footer { text-align:center; margin-top:18px; font-size:.85rem; opacity:.9; }
+
+/* Preview controls */
+.ecwpr-preview-controls { display:flex; gap:8px; justify-content:flex-end; margin-bottom:8px; }
+#ecwpr-preview-mode-toggle { padding:6px 10px; }
+
+/* Focus and accessibility */
+.ecwpr-preview .ecwpr-preview-form input:focus, .ecwpr-settings-scroll input:focus, .ecwpr-settings-scroll select:focus { outline: 3px solid rgba(59,130,246,0.14); outline-offset: 2px; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .ecwpr-admin-container { flex-direction: column; }
+  .ecwpr-admin-left { max-width: 100%; }
+  .ecwpr-admin-right { width: 100%; max-width: 100%; }
+  .ecwpr-preview-sticky { position: static; }
+  .form-table th { 
+    width: auto; 
+    min-width: 120px;
+    max-width: 150px;
+  }
+}
+
+/* Collapsible sections */
+.ecwpr-section { margin-bottom: 14px; }
+.ecwpr-section-title { margin: 0 0 6px 0; }
+.ecwpr-section-toggle { background: transparent; border: none; font-size: 1rem; font-weight: 700; cursor: pointer; color: #111827; }
+.ecwpr-section-body[hidden] { display: none; }
+.ecwpr-section-body { padding: 12px 16px; background: #f9fafb; border-radius: 6px; border: 1px solid #eef2f7; }
+
+/* Preview: mimic WP login layout links and toggle */
+.ecwpr-preview-toprow { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
+.ecwpr-preview-links { font-size:0.9rem; }
+.ecwpr-preview-links a { color: inherit; text-decoration: none; opacity: 0.95; margin-right: 8px; }
+.ecwpr-preview-toggle-visual { padding:6px 10px; border-radius:999px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); font-size: .85rem; }
+.ecwpr-preview-light .ecwpr-preview-toggle-visual { background: rgba(37,99,235,0.08); border: 1px solid #cfe0ff; color:#2563eb; }
+
+/* Toggle pill animation */
+.ecwpr-preview-toggle-visual { position: relative; display: inline-block; min-width:64px; text-align:center; transition: background 220ms ease, color 220ms ease; }
+.ecwpr-preview-toggle-visual::after { content: ''; position: absolute; left: 8px; top: 6px; width: 18px; height: 18px; background: #fff; border-radius: 50%; transition: transform 240ms cubic-bezier(.2,.9,.2,1), background 240ms ease; box-shadow: 0 2px 6px rgba(2,6,23,0.12); }
+.ecwpr-preview-toggle-visual.ecwpr-toggle-on::after { transform: translateX(28px); background: #fff; }
+.ecwpr-preview-toggle-visual.ecwpr-toggle-on { background: rgba(37,99,235,0.16); color: #0f172a; }
